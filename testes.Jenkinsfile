@@ -1,11 +1,10 @@
 pipeline{
-    agent any
+    agent { label 'mestre' }
     stages{
 
         stage('stage1'){
             steps{
                 echo 'step1 do stage 1'
-                echo $date
             }
         }
 
