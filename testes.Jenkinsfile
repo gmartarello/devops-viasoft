@@ -14,6 +14,14 @@ pipeline{
                 '''
             }
         }
+
+        stage('Recuperar Senha Vault - 2'){
+            steps{
+                withVault(configuration: [disableChildPoliciesOverride: false, engineVersion: 2, skipSslVerification: true, timeout: 60, vaultCredentialId: 'vault-read-token', vaultUrl: 'http://vault.viasoftcloud.com.br:8200']) {
+                    // some block
+                }
+            }
+        }        
                 
     }
 }
