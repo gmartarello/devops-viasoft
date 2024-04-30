@@ -9,7 +9,9 @@ pipeline{
 
         stage('Recuperar Senha Vault'){
             steps{
-                sh 'printenv'
+                sh '''
+                    date
+                '''
             }
         }
 
