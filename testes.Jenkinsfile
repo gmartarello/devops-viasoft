@@ -7,19 +7,15 @@ pipeline{
 
     stages{
 
-        stage('stage1'){
-            environment{
-                VAR_LOCAL = 'VARIÁVEL LOCAL'
-            }
+        stage('Recuperar Senha Vault'){
             steps{
-                echo 'stage 1'
                 sh 'printenv'
             }
         }
 
         stage('stage2'){
             steps{
-                echo 'step1 do stage 2'
+                echo 'step 1 do stage 2'
             }
         }
                  
