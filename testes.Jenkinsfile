@@ -10,7 +10,7 @@ pipeline{
         stage('Recuperar Senha Vault'){
             steps{
                 sh '''
-                    PASS=$(vault kv get -field "VIASOFT" -address="http://vault.viasoftcloud.com.br:8200" VIASOFT/ACAR/ORACLE/AGROTITAN/acar)
+                    PASS=$(sudo vault kv get -field "VIASOFT" -address="http://vault.viasoftcloud.com.br:8200" VIASOFT/ACAR/ORACLE/AGROTITAN/acar)
                 '''
             }
         }
